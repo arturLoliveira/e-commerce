@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+main h1 {
+    margin: 5px 35px;
+}
+
+section.container {
+    display: grid;
+    grid-template: 80px 700px / 100vw;
+    grid-template-areas: "ca "
+                         "co ";
+}
+
+/* configurando o header*/
+
+header {
+    display: flex;
+    z-index: 2;
+    background-color: lightblue;
+    grid-area: ca;
+    width: 100%;
+}
+i {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 32px;
+}
+#span {
+    position: relative;
+    margin-left: 93%;
+    top: 10px;
+}
+
+div#sacola {
+    opacity: 0;
+    position: absolute;
+    right: 30px;
+    width: 350px;
+    background-color: white;
+    top: 60px;
+    box-shadow: 4px 4px black;
+    display: flex;
+    flex-direction: column;
+}
+#sacola h1 {
+    
+    top: 5px;
+}
+.menu-closer {
+    cursor: pointer;
+    margin-top: 8px;
+    margin-left: 310px;
+}
+.cart {
+    margin-top: 0px; 
+    padding-left: 10px;
+}
+.cart--totalitem {
+    margin-top: 15px;
+    font-size: 18pt;
+    padding-left: 10px;
+    display: block;
+} 
+.cart-item img {
+    width:80px;
+    height:80px;
+    margin-top: 30px;
+}
+.cart-item-nome {
+    font-size: 16pt;
+    margin-left: 93px;
+    margin-top: -50px;
+}
+.cart-item-qtarea {
+    display: flex;
+    flex-direction: row;
+    margin-left: 270px;
+    margin-top: -30px;
+    background-color: lightblue;
+    padding: 5px;
+    width: 55px;
+}
+.cart-item-qtmenos{
+    background-color: transparent;
+    border: none;
+    padding-right: 5px;
+}
+.cart-item-qtmais{
+    background-color: transparent;
+    border: none;
+    padding-left: 5px;
+}
+.cart-item-qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+.cart--finalizar {
+    margin-bottom: 10px;
+    padding:10px 20px;
+    border-radius:20px;
+    background-color:rgb(161, 220, 240);
+    color:black;
+    cursor:pointer;
+    text-align:center;
+    margin-top:20px;
+    border:2px solid lightblue;
+    transition: all ease .2s;
+}
+input#pesquisa {
+    position: absolute;
+    height: 30px;
+    width: 30%;
+    top: 20px;
+    margin-left: 300px;
+}
+header h1{
+    position: absolute;
+    top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+div.compras {
+    grid-area: co;
+    background-color: white;
+    display: none;
+    
+}
+div.clouth-item {
+    display: inline-block;
+    margin-bottom: 40px;
+}
+div.clouth-item--img img {
+    width: 250px;
+    height: 300px;
+    margin: 0 5px;
+    border: 2px solid black;
+}
+.clouth-item--add {
+    width:50px;
+    height:50px;
+    line-height:50px;
+    border-radius:25px;
+    background-color:lightblue;
+    text-align:center;
+    color:black;
+    font-size:22px;
+    position: absolute;
+    margin: 0 auto;
+    margin-top:-25px;
+    transition:all ease .2s;
+}
+.clouth-area {
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.clouthWindowArea {
+    display: none;
+}
+.clouthWindowBody {
+    display: block;
+    width: 55%;
+    height: 400px;
+    background-color: lightblue;
+    position: fixed;
+    margin-left: 20%;
+    margin-top: -600px;
+    box-shadow: 3px 3px 5px black;
+}
+.clouthInfo--cancelMobileButton{
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    width: 55px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    font-size: 12pt;
+    padding: 8px;
+    display: none;
+}
+.clouthBig {
+    flex:1;
+    width: 300px;
+    position: absolute;
+    left: 1%;
+    top: 30px;
+}
+.clouthInfo {
+    position: absolute;
+    top: 30px;
+    margin-left: 46%;
+}
+.clouthInfo--info{
+    margin-top: 25px;
+    font-size: 18pt;
+    margin-bottom: 25px;
+}
+.clouthInfo--sector {
+    font-size: 17pt;
+}
+.clouthInfo--sizes {
+    display: flex;
+    margin-top: 5px;
+}
+.clouthInfo--size:hover {
+    background-color: black;
+    color: white;
+}
+.clouthInfo--size {
+    padding: 10px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.clouthInfo--sector{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.clouthInfo--qtarea{
+    display: flex;
+    margin-top: 15px;
+}
+.clouthInfo--qtmenos{
+    margin-right: 5px;
+    width: 20px;
+    cursor: pointer;
+}
+.clouthInfo--qtmais {
+    width: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.clouthInfo--addButton{
+    margin-top: 30px;
+    background-color: aliceblue;
+    width: 220px;
+    font-size: 17pt;
+    border-radius: 29px;
+    text-align: center;
+    cursor: pointer;
+}
+.clouthInfo--addButton:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.clouthInfo--cancelButton {
+   position: absolute;
+   right: 20px;
+   bottom: 1px;
+   font-size: 14pt;
+   cursor: pointer;
+}
+.clouthInfo--cancelButton:hover {
+    background-color: aliceblue;
+    border-radius: 15px;
+    width: 80px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .clouth-area {
+        padding-left: 110px;
+    }
+    .clouthBig img{
+        width: 170px;
+        height: 250px;
+        margin-top: 50px;
+    }
+    .clouthInfo--addButton{
+        position: absolute;
+        left: -150px;
+    }
+    .clouthInfo--cancelButton {
+        position: absolute;
+        top: 335px;
+    }
+}
+@media (max-width: 555px) {
+    #pesquisa {
+        display: none;
+    }
+    .clouthWindowBody{
+        margin-top: -650px;
+    }
+    .clouthBig img{
+        width: 270px;
+        height: 150px;
+        margin-top: 0px;
+        margin-left: 15px;
+    }
+    .clouthInfo {
+        margin-left: 20px;
+        margin-top: 140px;
+    }
+    .clouthInfo h1 {
+        display: none;
+    }
+    .clouthInfo--info {
+        font-size: 13pt;
+        margin-bottom: 5px;
+    }
+    .clouthInfo--sector {
+        margin-top: 0px;
+    }
+    .clouthInfo--cancelMobileButton {
+        display: block;
+    }
+    .clouthInfo--cancelButton {
+        display: none;
+    }
+    .clouthInfo--addButton {
+        position: relative;
+        left: 65%;
+        top: -160px;
+        width: 150px;
+        background-color: #000;
+        color: white;
+    }
+}
+@media (max-width: 425px) {
+    .clouthBig img {
+        width: 170px;
+    }
+    .clouthInfo--addButton{
+        width: 80px;
+        font-size: 10pt;
+        margin-top: 45px;
+    }
+    .clouthInfo--cancelMobileButton {
+        position: relative;
+        top: 310px;
+        left: 62%;
+    }
+}
+@media (max-width: 375px) {
+    .clouthInfo--addButton {
+        position: relative;
+        left: 60%;
+        top: -160px;
+        width: 80px;
+        background-color: #000;
+        color: white;
+    }
+}
+
+
+
